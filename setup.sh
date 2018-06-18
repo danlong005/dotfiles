@@ -25,15 +25,18 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 chsh -s $(which zsh)
 
 
-echo "Installing nvm"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
-nvm install node
-echo "nvm use node" >> ~/.zshrc
 
 
-echo "Installing rvm"
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-curl -sSL https://get.rvm.io | bash -s stable --ruby
+echo "Installing rbenv"
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+git clone https://github.com/rbenv/ruby-build.git
+sudo PREFIX=/usr/local ./ruby-build/install.sh
+
+echo "Installing nodenv"
+git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
+git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build
 
 
 if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
