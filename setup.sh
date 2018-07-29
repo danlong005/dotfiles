@@ -30,12 +30,15 @@ chsh -s $(which zsh)
 echo "Installing rbenv"
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+
 git clone https://github.com/rbenv/ruby-build.git
 sudo PREFIX=/usr/local ./ruby-build/install.sh
 
 echo "Installing nodenv"
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(nodenv init -)"' >> ~/.zshrc
 git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build
 
 

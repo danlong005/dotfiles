@@ -36,7 +36,7 @@ set number
 set t_co=256
 
 map \ :NERDTreeToggle<CR>
-map \|:NERDTreeToggle<CR>
+map \| :NERDTreeToggle<CR>
 
 inoremap jj <Esc>
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
