@@ -14,10 +14,20 @@ echo "Email? "
 read GIT_EMAIL
 git config --global user.email $GET_EMAIL
 
+##########################################################
+# tools
+##########################################################
+echo "Installing vim"
+sudo apt-get install vim
 
 echo "Installing tmate"
 sudo apt-get install tmate
 
+echo "Installing postgres"
+sudo apt-get install postgresql
+
+echo "Intalling redis"
+sudo apt-get install redis
 
 echo "Installing zsh"
 sudo apt-get install zsh
@@ -25,8 +35,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 chsh -s $(which zsh)
 
 
-
-
+##########################################################
+# programming languages
+##########################################################
 echo "Installing rbenv"
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
@@ -42,6 +53,10 @@ echo 'eval "$(nodenv init -)"' >> ~/.zshrc
 git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build
 
 
+
+#########################################################
+# vim plugins
+#########################################################
 if [ ! -e ~/.vim/bundle/Vundle.vim ]; then
   echo "installing Vundle for vim packages"
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
