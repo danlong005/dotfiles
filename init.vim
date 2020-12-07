@@ -47,8 +47,8 @@ inoremap jj <Esc>
 
 augroup filetypedetect
   au! BufRead,BufNewFile *.rpg          setfiletype rpg
-  au! BufRead,BufNewFile *.rpgle        setfiletype rpg
-  au! BufRead,BufNewFile *.sqlrpgle     setfiletype rpg
+  au! BufRead,BufNewFile *.rpgle        setfiletype rpgle
+  au! BufRead,BufNewFile *.sqlrpgle     setfiletype rpgle
   au! BufRead,BufNewFile *.clp          setfiletype clp
   au! BufRead,BufNewFile *.clle         setfiletype clp
   au! BufRead,BufNewFile *.dspf         setfiletype dds
@@ -57,7 +57,7 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.lf           setfiletype dds
 augroup END
 
-au! Syntax rpg          so ~/.vim/bundle/rpgle.vim/syntax/rpg.vim
-au! Syntax clp          so ~/.vim/bundle/rpgle.vim/syntax/clp.vim
-au! Syntax dds          so ~/.vim/bundle/rpgle.vim/syntax/dds.vim
+au! Syntax rpg          so ~/.config/nvim/bundle/rpgle.vim/syntax/rpg.vim
+au! Syntax clp          so ~/.config/nvim/bundle/rpgle.vim/syntax/clp.vim
+au! Syntax dds          so ~/.config/nvim/bundle/rpgle.vim/syntax/dds.vim
 
