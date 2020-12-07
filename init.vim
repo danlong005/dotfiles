@@ -6,8 +6,10 @@ call vundle#begin()
 
   Plugin 'VundleVim/Vundle.vim'
 
+  Plugin 'alvan/vim-closetag'
   Plugin 'andlrc/rpgle.vim'
   Plugin 'cakebaker/scss-syntax.vim'
+  Plugin 'jiangmiao/auto-pairs'
   Plugin 'kien/ctrlp.vim'
   Plugin 'leafgarland/typescript-vim'
   Plugin 'mxw/vim-jsx'
