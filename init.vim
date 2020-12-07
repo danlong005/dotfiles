@@ -1,3 +1,4 @@
+set encoding=UTF-8
 set nocompatible 
 filetype off
 
@@ -15,6 +16,8 @@ call vundle#begin()
   Plugin 'mxw/vim-jsx'
   Plugin 'nikvdp/ejs-syntax'
   Plugin 'pangloss/vim-javascript'
+  Plugin 'ryanoasis/vim-devicons'
+  Plugin 'sainnhe/gruvbox-material'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
   Plugin 'tpope/vim-endwise'
@@ -34,6 +37,7 @@ set shiftwidth=2
 set expandtab
 set mouse=a
 set number 
+colorscheme gruvbox-material
 
 let NERDTreeShowHidden=1
 map \ :NERDTreeToggle<CR>
