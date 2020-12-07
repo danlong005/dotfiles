@@ -10,6 +10,8 @@ call vundle#begin()
   Plugin 'alvan/vim-closetag'
   Plugin 'andlrc/rpgle.vim'
   Plugin 'cakebaker/scss-syntax.vim'
+  Plugin 'frazrepo/vim-rainbow'
+  Plugin 'itchyny/lightline.vim'
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'kien/ctrlp.vim'
   Plugin 'leafgarland/typescript-vim'
@@ -35,17 +37,43 @@ set autoindent smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set mouse=a
+set mouse=r
 set number 
 colorscheme gruvbox-material
 
+"
+" ========= VIM-RAINBOW ========================================
+"
+au FileType c,cpp,js,jsx,javascript.jsx,cs call rainbow#load()
+
+"
+" ========= LIGHTLINE ==========================================
+"
+let g:lightline = {
+  \'colorscheme': 'jellybeans',
+  \ }
+
+
+"
+" ========= NERD TREE ==========================================
+" 
 let NERDTreeShowHidden=1
 map \ :NERDTreeToggle<CR>
 map \| :NERDTreeToggle<CR>
 
+
+
+"
+" ========= KEYMAPPINGS ========================================
+" 
 inoremap jj <Esc>
 
-augroup filetypedetect
+
+
+"
+" ========= FILE DETECTION FOR RPGLE ===========================
+" 
+augroup filetypedetect 
   au! BufRead,BufNewFile *.rpg          setfiletype rpg
   au! BufRead,BufNewFile *.rpgle        setfiletype rpgle
   au! BufRead,BufNewFile *.sqlrpgle     setfiletype rpgle
