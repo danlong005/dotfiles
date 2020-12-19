@@ -32,6 +32,7 @@ call vundle#end()
 syntax on
 set background=dark
 filetype plugin indent on
+filetype plugin on
 set smarttab
 set autoindent smartindent
 set tabstop=2
@@ -39,7 +40,12 @@ set shiftwidth=2
 set expandtab
 set mouse=r
 set number 
+set nowrap
 colorscheme gruvbox-material
+"
+" ========= VIM-CLOSETAG =======================================
+"
+let g:closetag_filenames = '*.html,*.vue,*javascript.jsx,*.xml'
 
 "
 " ========= VIM-RAINBOW ========================================
