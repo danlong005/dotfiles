@@ -21,3 +21,7 @@ prompt_context() {
 
 LS_COLORS=$LS_COLORS:'ow=01;34:';
 export LS_COLORS
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+source /home/dlong/.rvm/scripts/rvm
